@@ -1,0 +1,5 @@
+build:
+  docker:
+    crypto-fetcher: ./crypto-fetcher
+    backend-service: ./backend-service
+    front: ./front
