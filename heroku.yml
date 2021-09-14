@@ -1,5 +1,5 @@
 build:
   docker:
-    crypto-fetcher: ./crypto-fetcher
-    backend-service: ./backend-service
-    front: ./front
+    crypto-fetcher: ./crypto-fetcher/Dockerfile
+    backend-service: ./backend-service/Dockerfile
+    front: ./front/Dockerfile
