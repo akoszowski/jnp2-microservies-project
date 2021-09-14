@@ -6,8 +6,7 @@ export function ChartPlotter({chartData}) {
     const TimeVal = chartData.map(data => data.date)
 
     return (
-        <div>
-            I am chart plotter
+        <div align="center" >
             <Plot
                 data={[
                     {
@@ -18,7 +17,7 @@ export function ChartPlotter({chartData}) {
                         marker: {color: 'red'},
                     },
                 ]}
-                layout={{width: 640, height: 480, title: `Price of: ${chartTicker}`}}
+                layout={{width: "80%", height: "50%", title: `Price of: ${chartTicker}`}}
             />
         </div>
     )

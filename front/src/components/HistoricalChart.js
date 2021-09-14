@@ -34,9 +34,9 @@ export function HistoricalChart() {
         })
     }, [])
 
+
     return (
-        <div>
-            I am historical chart
+        <div align="center">
             <DateChooser startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}/>
             <select value={chartTicker} onChange={(e) => setChartTicker(e.target.value)} disabled={!tickers}>
                 {tickers.map(ticker => {

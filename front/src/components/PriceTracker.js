@@ -8,14 +8,6 @@ export function PriceTracker() {
     const timeout = 10000
 
     const fetchPrice = async () => {
-        // axios.get('/curPrices').then(res => {
-        //     console.log(res.data)
-        //     setTickersData(res.data)
-        //     console.log(tickersData)
-        // }).catch(err => {
-        //     console.log(err)
-        // })
-
         const res = await axios.get('/curPrices')
 
         console.log('Updated tickers')
@@ -36,15 +28,13 @@ export function PriceTracker() {
 
     return (
         <div>
-            <p>I am tracker</p>
             {tickersData.map(tickerData => {
                 return (
                     <div>
-                        <LivePrice name={tickerData.ticker}/>
+                        <LivePrice name={tickerData.ticker} price={tickerData.price}/>
                     </div>
                 )
             })}
-            <p>I am plot</p>
         </div>
     )
 
