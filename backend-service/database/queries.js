@@ -6,8 +6,9 @@ class Queries {
         return res.rows
     }
 
-    static async getPricesInBetween(startDate, endDate) {
-        const res = await dbOperator.query('SELECT * FROM stock WHERE (date >= $1 AND date <= $2) ORDER BY date', [startDate, endDate])
+    static async getPricesInBetween(ticker, startDate, endDate) {
+        const res = await dbOperator.query('SELECT * FROM stock WHERE (ticker = $1 AND date >= $2 AND date <= $3) ORDER BY date', [ticker, startDate, endDate])
+        console.log(res)
         return res.rows
     }
 }

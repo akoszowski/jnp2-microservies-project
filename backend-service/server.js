@@ -45,13 +45,14 @@ app.get('/curPrices', (req, res) => {
 
 app.get('/historicalPrices', async (req, res) => {
     console.log('Historical prices: ', req.query)
+    const charTicker = req.query.chartTicker
     const startDate = req.query.startDate
     const endDate = req.query.endDate
 
     try {
-        const data = await Queries.getPricesInBetween(startDate, endDate)
+        const data = await Queries.getPricesInBetween(charTicker, startDate, endDate)
 
-        console.log('Historical data fetched')
+        console.log('Historical data fetched: ', data)
 
         res.send(data)
     } catch (err) {

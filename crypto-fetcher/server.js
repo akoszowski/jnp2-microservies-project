@@ -4,7 +4,8 @@ const axios = require('axios');
 const tickers = require("./tickers");
 const Queries = require("./database/queries");
 
-const token = '528fdcbeab906f771da5f05426dad52e985e87f8'
+// const token = '528fdcbeab906f771da5f05426dad52e985e87f8'
+const token = 'c8b1dd46f7acfa92b36ce2b800af6c501b948780'
 const API_URL = `https://api.tiingo.com/tiingo/crypto/prices?tickers=${tickers.toString()}&token=${token}&resampleFreq=`
 const REDIS_URL = 'redis://:p77350001bad129c4cdc387b44cb4907222e70ef945689fa345c89c3577f567fe@ec2-46-137-29-64.eu-west-1.compute.amazonaws.com:31590'
 
