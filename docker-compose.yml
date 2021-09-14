@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  crypto-fetcher:
+    build: ./crypto-fetcher
+    ports:
+    - "6000:6000"
+  backend-service:
+    build: ./backend-service
+    ports:
+    - "5000:5000"
+  front:
+    build: ./front
+    ports:
+    - "3000:3000"

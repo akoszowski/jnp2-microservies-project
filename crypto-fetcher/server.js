@@ -77,7 +77,7 @@ function fetchLiveData(resampleFreq) {
 
             console.log(ticker, priceData, date, close)
 
-            if (date.getMinutes() % 60 === 0) {
+            if (date.getHours() % 24 === 0) {
                 Queries.pushTickerData(ticker, close, date).then(res => {
                     console.log(res)
                 }).catch(err => {
@@ -106,9 +106,9 @@ app.listen(6000, async () => {
 
     await flushData()
 
-    const historicalFreq = '8hour'
+    const historicalFreq = '1day'
     const liveFreq = '1min'
-    const startDate = '2021-09-01'
+    const startDate = '2021-01-01'
     const endDate = (new Date(Date.now() + (3600 * 1000 * 24))).toISOString().split('T')[0]
 
     await fetchHistoricalData(historicalFreq, startDate, endDate)

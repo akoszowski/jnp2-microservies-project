@@ -1,6 +1,6 @@
 const express = require('express')
 const redis = require('redis')
-const Queries = require("../backend-service/database/queries");
+const Queries = require("./database/queries");
 
 const REDIS_URL = 'redis://:p77350001bad129c4cdc387b44cb4907222e70ef945689fa345c89c3577f567fe@ec2-46-137-29-64.eu-west-1.compute.amazonaws.com:31590'
 
